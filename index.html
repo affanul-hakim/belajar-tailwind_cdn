@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Belajar Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // costum
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+            colors: {
+              wpu: "#bada55",
+              kopi: "#c0ffee",
+            },
+            animation: {
+              "spin-slow": "spin 3s linear infinite",
+              goyang: "goyang 1s ease-in-out infinite",
+            },
+            keyframes: {
+              goyang: {
+                "0%, 100%": { transform: "rotate (-3deg)" },
+                "50%": { transform: "rotate(3deg)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3;
+      }
+      /* * {
+        border: 1px solid blue;
+      } */
+    </style>
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-8xl font-bold text-center my-8">
+      Belajar
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent"
+        >TailwindCSS</span
+      >
+    </h1>
+
+    <h1
+      class="text-7xl font-bold m-7 p-10 font-inter text-green-500 text-center"
+    >
+      Belajar
+      <span
+        class="bg-gradient-to-r from-blue-400 to-teal-600 bg-clip-text text-transparent"
+      >
+        Web Programing</span
+      >
+    </h1>
+
+    <section
+      class="mb-10 bg-gradient-to-br from-indigo-200 via-red-400 to-yellow-300"
+    >
+      <h2 class="text-3xl text-center">Spacing</h2>
+      <div class="m-13">margin</div>
+      <div class="p-10">Pading</div>
+    </section>
+    <section class="mb-10 bg-green-200">
+      <h2 class="text-3xl text-center">Sizing</h2>
+      <div class="w-32 h-32 bg-kopi">Kotak 1</div>
+    </section>
+    <section class="mb-10 font-inter max-w-3xl mx-auto">
+      <h2 class="mb-2 text-4xl font-bold">
+        Belajar Mengenai Typography pada TailwindCSS
+      </h2>
+      <div class="mb-4 text-gray-500">
+        By <a href="#" class="text-gray-800 font-semibold">Affanul Hakim</a> , 1
+        Januari 2025
+      </div>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet,
+        <a href="#" class="underline font-semibold text-blue-600"
+          >consectetur</a
+        >
+        adipisicing elit. Omnis quibusdam ut magnam fugiat incidunt illum qui
+        quasi reprehenderit dolor earum pariatur nesciunt rerum modi alias
+        dolores expedita sapiente eos nihil natus quaerat consequuntur delectus
+        eius, deleniti totam. Ab cupiditate doloremque quae? Magni quia
+        repellendus voluptatum in nam nulla, doloribus asperiores.
+      </p>
+      <blockquote class="mb-10 italic font-thin text-xl">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae accusamus
+        repellendus enim provident similique eum non, ipsam laudantium maiores
+        inventore."
+      </blockquote>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dolore
+        reiciendis! Doloremque deserunt ipsam perferendis perspiciatis tempore
+        nulla quibusdam similique!
+      </p>
+    </section>
+    <section class="mb-10 font-inter max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">
+        4. Basic Utility - Bagian 1 | Belajar Tailwind CSS
+      </h2>
+      <div class="mb-9 text-gray-400">
+        Web Programing Unpas, 1 Januari 2025, By
+        <a href="#" class="underline text-blue-500 font-bold">Sandika Galih</a>
+      </div>
+      <p class="text-justify">
+        Membahas Programing - Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Ullam, voluptatem? Aliquam quo alias eos fuga. Animi
+        reiciendis praesentium aliquam dolores alias repudiandae nisi recusandae
+        nulla tenetur dolore tempora, optio excepturi, eius ratione odit sunt?
+        Architecto corporis facilis nulla ipsa enim pariatur quod, atque
+        accusamus quam officia beatae tenetur ab omnis.
+      </p>
+    </section>
+    <div
+      class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-fixed"
+      style="background-image: url('https://picsum.photos/1000/600')"
+    >
+      <p class="p-5 text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vitae
+        accusamus enim debitis illum. Magni dignissimos dolorem sapiente magnam
+        vel? Non id fugiat minus veniam adipisci asperiores quos, eaque, eos
+        quasi doloribus aspernatur illo. Nihil aliquid consequatur aut totam
+        voluptas ipsam qui nisi deserunt placeat! Libero quaerat eligendi
+        impedit debitis optio illo modi quo. Ratione est, dolorum neque
+        temporibus facilis cupiditate sint dolorem porro inventore quam rerum
+        nihil magnam explicabo ipsum sequi voluptas voluptates ut dolore facere
+        enim. Mollitia adipisci repudiandae itaque similique ex iusto explicabo
+        labore beatae, sed, ipsa tempore eveniet vitae corporis quas earum
+        aliquam omnis voluptate! Eveniet odit modi quia minima reiciendis, ipsam
+        tenetur sequi sit qui ab alias nesciunt impedit similique maiores
+        nostrum iste totam assumenda! Praesentium suscipit molestiae a eos
+        magnam id, mollitia ratione, iusto, labore omnis est vero consequuntur
+        magni esse nulla distinctio ipsam aliquid aut? Labore nemo placeat
+        quisquam aspernatur, velit ex aut nam voluptas eum consequatur, modi,
+        quasi eveniet dicta beatae magni! Eos enim voluptatibus quaerat mollitia
+        cum! Libero, possimus! Nam cupiditate sunt iusto omnis nulla
+        dignissimos, veniam amet tempora! Consequuntur cum eaque eum nobis? Unde
+        eligendi natus dolores non id facilis magnam reiciendis neque, dicta
+        consequatur architecto adipisci deserunt ullam iusto?
+      </p>
+    </div>
+
+    <div
+      class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 drop-shadow flex sepia-0"
+      style="background-image: url(./img/image.jpg)"
+    >
+      <div
+        class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-sm rounded-full"
+      ></div>
+    </div>
+    <hr class="my-20" />
+
+    <div class="flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle" id="toggle">
+        <div
+          class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button
+      class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100"
+    >
+      Simpan
+    </button>
+
+    <button
+      class="my-10 px-5 py-2 bg-sky-400 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-700 active:bg-sky-800 focus:ring focus:ring-sky-400 dark:bg-slate-300 dark:text-slate-700 dark:hover:text-slate-900 dark:hover:bg-slate-100"
+    >
+      Tambah
+    </button>
+
+    <div
+      class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300"
+    >
+      <h5
+        class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-600 group-hover:text-white text-sm text-justify selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+        possimus? Facere possimus eos impedit quibusdam suscipit dignissimos?
+        Iusto, molestiae voluptatum. Eum quia culpa odio ipsum praesentium vel
+        cumque cupiditate in?
+      </p>
+    </div>
+
+    <div
+      class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5"
+    >
+      <form action="">
+        <label for="email">
+          <span
+            class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5"
+            >Email</span
+          >
+          <input
+            type="email"
+            id="email"
+            placeholder="masukan email"
+            class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+          />
+          <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">
+            email tidak valid
+          </p>
+        </label>
+      </form>
+    </div>
+    <hr class="my-20" />
+
+    <div
+      class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-125 hover:rotate-45 origin-top-left transition hover:bg-pink-400"
+    ></div>
+
+    <div class="w-40 h-40 mx-auto mt-20 group">
+      <div
+        class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000"
+      ></div>
+    </div>
+
+    <div
+      class="w-40 h-40 mt-20 bg-pink-500 mx-auto rounded-lg shadow-lg animate-spin-slow"
+    ></div>
+
+    <div
+      class="w-40 h-40 mt-20 bg-red-500 mx-auto rounded-lg shadow-lg animate-goyang"
+    ></div>
+
+    <hr class="my-20 border-t-4" />
+
+    <div class="container mx-auto">
+      <div class="border rounded-lg shadow-lg p-10 relative">
+        <div
+          class="w-10 h-10 bg-pink-200 rounded-full flex fixed bottom-5 left-0-5 cursor-pointer"
+        >
+          <a href="#" class="text-2xl m-auto">🔝</a>
+        </div>
+        <img
+          src="img/image.jpg"
+          alt="laptop"
+          width="200"
+          class="float-left mr-4 rounded-lg"
+        />
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+          explicabo non. Libero dolores necessitatibus ipsa omnis nobis magni
+          pariatur. Amet blanditiis quod corrupti doloribus ipsam impedit sed
+          possimus suscipit totam tempora dignissimos nemo officia beatae ad,
+          numquam ratione, nesciunt veritatis praesentium mollitia, dolor
+          facilis libero repudiandae magnam. Commodi libero cum quaerat nemo,
+          distinctio dolores totam suscipit velit? Odio exercitationem quis
+          adipisci, vero quod blanditiis nobis laborum error rerum eius nam
+          accusamus earum ipsum sit veritatis mollitia eligendi necessitatibus.
+          Quidem delectus, aliquam, modi culpa iure fugit doloribus voluptatem
+          repellendus nulla soluta placeat! Nostrum iusto obcaecati ex a facilis
+          provident et consequatur.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="container mx-auto border rounded-lg shadow-lg p-10 mt-20 columns-3"
+    >
+      <img src="https://picsum.photos/600/400" alt="gambar" class="mb-4" />
+      <img src="https://picsum.photos/600/400" alt="gambar" class="mb-4" />
+      <img src="https://picsum.photos/600/400" alt="gambar" class="mb-4" />
+      <img src="https://picsum.photos/600/400" alt="gambar" class="mb-4" />
+      <img src="https://picsum.photos/600/400" alt="gambar" class="mb-4" />
+      <img src="https://picsum.photos/600/400" alt="gambar" class="mb-4" />
+    </div>
+
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
