@@ -1,0 +1,17 @@
+1. Dokumentasi Instalasi Tailwindcss 3:
+https://v3.tailwindcss.com/docs/installation
+
+2. Jalankan instalasi tailwindcss :
+npm install -D tailwindcss@3
+npx tailwindcss init
+
+3. Seting sesuai lokasi index tailwind :
+tailwind.config.js
+
+4. Buat folder ./src/input.css
+
+5. Untuk Build jalankan :
+npx tailwindcss -i ./src/input.css -o ./css/style.css --watch
+
+6. Masuk ke file index.html dan Arahkan link ke Style.css
+ <link rel="stylesheet" href="css/style.css">
