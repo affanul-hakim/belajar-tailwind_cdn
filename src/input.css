@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-8xl;
-    /* spesifikasi warna theme */
-    color: theme(colors.wpu);
+  /* h1 { */
+  /* @apply text-8xl; */
+  /* spesifikasi warna theme */
+  /* color: theme(colors.wpu); */
 
-    /* di konvert ke warna rgb */
-    /* @apply text-8xl text-wpu; */
-  }
+  /* di konvert ke warna rgb */
+  /* @apply text-8xl text-wpu; */
+  /* } */
 }
 @layer components {
   .grid-card {
